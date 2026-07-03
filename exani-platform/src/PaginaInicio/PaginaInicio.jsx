@@ -1,9 +1,9 @@
-function PaginaLogin() {
+function PaginaInicio() {
   return (
     <div>
-      <h1>Pagina de login</h1>
+      <h1>Pagina de inicio</h1>
     </div>
   )
 }
 
-export default PaginaLogin
+export default PaginaInicio
