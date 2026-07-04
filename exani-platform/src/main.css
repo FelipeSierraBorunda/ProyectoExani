@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  background-color: #FBF8F2;
+}
+h1, h2, h3,
+.titulo {
+  font-family: 'Lora', serif;
+      
+}
+
+.titulo-hero {
+  font-family: 'Lora', serif;
+  font-weight: 300;
+  font-style: italic;  
+}
