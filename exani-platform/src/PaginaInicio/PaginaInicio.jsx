@@ -52,10 +52,20 @@ function AreasCurso() {
 function PlanesPago() {
     return (
         <div className="PlanesPago">
-            <div className="DivContenido">
-            <h1>Planes de pago</h1>
+            <div className="DivContenidoVertical">
+                <div className="ContenedorTextoPlanes">
+                    <h1> Elige tu plan</h1>
+                    <p> Pago único. Acceso hasta el dia de tu examen</p>
+                </div>
+                <div className="ContenedorPlanes">
+                    <div className="Planes" id="Plan1">
+                    <h1>Plan Básico</h1>
+                    </div>
+                    <div className="Planes" id="Plan2">
+                    <h1>Plan Intermedio</h1>
+                    </div>
+                </div>
             </div>
-
         </div>
     )
 }

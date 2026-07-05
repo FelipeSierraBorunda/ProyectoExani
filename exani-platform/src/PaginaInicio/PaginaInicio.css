@@ -91,3 +91,29 @@
     color: #4A0C1C;
     background-color: #F3EBDD;
 }
+.ContenedorTextoPlanes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.ContenedorPlanes{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.Planes{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+#Plan1{
+
+    background-color: white;
+}
+#Plan2{
+
+    background-color: #55101F;
+    color: #E8D9BE;
+}
