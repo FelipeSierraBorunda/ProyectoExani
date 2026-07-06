@@ -59,10 +59,26 @@ function PlanesPago() {
                 </div>
                 <div className="ContenedorPlanes">
                     <div className="Planes" id="Plan1">
-                    <h1>Plan Básico</h1>
+                    <h3>Guía Completa</h3>
+                    <h2> $ 1,500.00 </h2>
+                    <h3> MXN </h3>
+                    <ul>
+                        <li>Las 3 areas completas por modulos</li>
+                        <li>Ejemplos resueltos paso a paso</li>
+                        <li>Simuladores de examen</li>
+                    </ul>
+
                     </div>
                     <div className="Planes" id="Plan2">
-                    <h1>Plan Intermedio</h1>
+                    <h3>Guia Completa + asesoria </h3>
+                    <h2> $ 2,500.00 </h2>
+                    <h3> MXN </h3>
+                    <ul>
+                        <li>La guia completa</li>
+                        <li>1 asesoria personalizada</li>
+                        <li>Simuladores de examen</li>
+                        <li>Plan de estudios segun tu fecha</li>
+                    </ul>
                     </div>
                 </div>
             </div>
