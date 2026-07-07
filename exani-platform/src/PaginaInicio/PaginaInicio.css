@@ -98,22 +98,75 @@
     padding: 30px;
 }
 .ContenedorPlanes{
+        background-color: #E8D9BE;
     display:flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 .Planes{
-    padding: 20px;
+
+    padding: 40px;
     margin: 10px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Planes h4{
+    align-self:flex-start;
+    font-size: 14px;
+    color: #A89A8E;
+    margin-bottom: 10px;
+
+}
+.Planes button{
+
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    justify-content: center;
+    align-self: baseline;
+}
+.Planes ul{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1.7;
 }
 #Plan1{
-
+    
     background-color: white;
 }
+#Plan1 button{
+    color: white;
+    background-color: #4A0C1C;
+}
 #Plan2{
-
-    background-color: #55101F;
+    background-color: #6B1228;
     color: #E8D9BE;
+}
+#Plan2 button{
+    background-color: #E0C69A;
+    color: #55101F;
+}
+#ContenedorPrecio{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
+}
+#ContenedorPrecio h2{
+    font-size: 40px;
+    font-weight: bold;
+     align-self: flex-end;
+}
+#ContenedorPrecio h3{
+    align-self: flex-end;
 }
