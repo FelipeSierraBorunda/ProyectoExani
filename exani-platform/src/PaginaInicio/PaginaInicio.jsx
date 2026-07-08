@@ -6,6 +6,7 @@ function PaginaInicio() {
       <DescripcionCurso />
         <AreasCurso />
         <PlanesPago />
+        <Footer/>
     </div>
   )
 }
@@ -29,8 +30,10 @@ function AreasCurso() {
     return (
         <div className="AreasCurso">
             <div className="DivContenidoVertical">
-                <h1>Tres áreas, un objetivo</h1>
-                <p>El contenido exacto que evalúa el CENEVAL, sin rellenos</p>
+                <div id="TituloAreas" >
+                    <h1>Tres áreas, un objetivo</h1>
+                    <p>El contenido exacto que evalúa el CENEVAL, sin rellenos</p>
+                </div>
                 <div className="DivAreas">
                     <div className="Area">
                         <h2>Metodología de la Investigación</h2>
@@ -59,29 +62,28 @@ function PlanesPago() {
                 </div>
                 <div className="ContenedorPlanes">
                     <div className="Planes" id="Plan1">
-                        <h4>Guía Completa</h4>
+                        <h4 id='tituloPlan1'>GUÍA COMPLETA</h4>
                         <div id="ContenedorPrecio">
                             <h2> $ 100</h2>
-                            <h3>MXN </h3>
+                            <h3 id='moneda1'>MXN </h3>
                         </div>
                         <ul>
-                            <li>Las 3 areas completas por modulos</li>
+                            <li> Las 3 areas completas por modulos</li>
                             <li>Ejemplos resueltos paso a paso</li>
                             <li>Simuladores de examen</li>
                         </ul>
                         <button>Seleccionar Plan</button>
                     </div>
                     <div className="Planes" id="Plan2">
-                        <h4>Guia Completa + asesoria </h4>
+                        <h4 id='tituloPlan2'>GUÍA COMPLETA + ASESORÍA </h4>
                          <div id="ContenedorPrecio">
-                            <h2> $ 200 </h2>
-                            <h3>MXN </h3>
+                            <h2 id='precio2'> $ 200 </h2>
+                            <h3 id='moneda2'>MXN </h3>
                         </div>
                         <ul>
                             <li>La guia completa</li>
                             <li>1 asesoria personalizada</li>
                             <li>Simuladores de examen</li>
-                            <li>Plan de estudios segun tu fecha</li>
                         </ul>
                         <button>Seleccionar Plan</button>
                     </div>
@@ -90,5 +92,12 @@ function PlanesPago() {
         </div>
     )
 }
-
+function Footer() {
+    return(
+        <div className="footer">
+            <p> Ruta Exani</p>
+            <p> Preparación para EXANI-III · México · 2026-2027</p>
+        </div>
+    )
+}
 export default PaginaInicio
