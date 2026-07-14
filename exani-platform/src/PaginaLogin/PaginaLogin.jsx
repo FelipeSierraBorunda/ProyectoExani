@@ -13,6 +13,7 @@ function BloqueLogin (){
     const [mensaje,setMensaje] = useState(``)
 
     function manejadordelogin(props){
+        
         console.log("Intentatdo login")
     }
     console.log(correo)
