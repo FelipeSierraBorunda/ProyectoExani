@@ -1,0 +1,76 @@
+.BloqueLogin{
+    background-color: #55101F;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.AvatarLogin{
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: white;
+    border: 2px solid #D8B37A;
+
+    left: 50%;
+    top: 12%;
+
+    transform: translate(-50%, -50%);
+}
+.AvatarLogin img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.FormularioLogin{
+    margin: 30px;
+    margin-top: 60px;
+    padding: 30px;
+    padding-top: 60px;
+   border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.FormularioLogin h1 {
+    color: #55101F;
+    line-height: 40px;
+    font-size: 30px;
+}
+.FormularioLogin  h2{
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 100;
+}
+.CampoLogin{
+    width: 100%;
+     line-height: 30px;
+    padding: 5px;
+    align-self: self-start;
+}
+.CampoLogin input{
+  border: 1px solid #ccc;
+  border-radius: 10px ;
+  padding: 10px;
+  width: 100%;
+}
+.CampoLogin h3{
+  font-size: 14px;
+    margin-bottom: 5px;
+}
+.BotonEntrar{
+    background-color: #55101F;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 10px ;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}

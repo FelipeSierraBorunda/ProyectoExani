@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { supabase } from "../supabase.js"
+import "./PaginaLogin.css"
 
 function PaginaLogin() {
 
@@ -8,24 +9,42 @@ function PaginaLogin() {
     )
 }
 function BloqueLogin (){
-    const [correo,setCorreo] = useState(`tu@correo.com`)
+    const [correo,setCorreo] = useState(``)
     const [contrasena,setcontrasena] = useState(`a`)
     const [mensaje,setMensaje] = useState(``)
 
-    function manejadordelogin(props){
-        
-        console.log("Intentatdo login")
+    async function manejadordelogin(){
+        const {data, error} = await supabase.auth.signInWithPassword({
+            email: correo,
+            password: contrasena
+        })
+
+        if(error){
+            setMensaje("Correo o contraseña incorrectos")
+        } else {
+            setMensaje("Inicio de sesión exitoso")
+        }
     }
-    console.log(correo)
+
     return(
-    <div>
+    <div className="BloqueLogin">
+            <div className="AvatarLogin">
+            <img src="/avatar.png" alt="Avatar" />
+        </div>
+        <div className="FormularioLogin">
             <h1>Bienvenido de vuelta</h1>
             <h2>Continúa tu ruta hacia el examen </h2>
-            <h3>Correo electrónico</h3>
-            <input onChange={(evento) => setCorreo(evento.target.value)} type="email" ></input>
-            <h3>Contraseña</h3>
-            <input onChange={(evento) => setcontrasena(evento.target.value)} type="password"></input>
-            <button onClick={manejadordelogin}>Entrar</button>
+            <div className="CampoLogin">
+                <h3>Correo electrónico</h3>
+                <input onChange={(evento) => setCorreo(evento.target.value)} type="email" placeholder="tu@correo.com"></input>
+            </div>
+            <div className="CampoLogin">
+                <h3>Contraseña</h3>
+                <input onChange={(evento) => setcontrasena(evento.target.value)} type="password"></input>
+            </div>
+            <button className="BotonEntrar" onClick={manejadordelogin}>Entrar</button>
+            <p className="MensajeLogin">{mensaje}</p>
+        </div>
     </div>
     )
 }
