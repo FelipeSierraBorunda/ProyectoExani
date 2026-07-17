@@ -4,8 +4,8 @@
 .DivContenido {
     display: flex;
     justify-content: space-between;
+    flex: 1 1 400px;
     padding: 30px;
-    
 }
 .DivContenidoVertical {
     display: flex;
@@ -18,18 +18,61 @@
 /* ===================== */
 /* DESCRIPCION CURSO     */
 /* ===================== */
+
 .DescripcionCurso {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding: 20px;
+    padding-top: 75px;
+    padding-bottom: 95px;
     color: #E8D9BE;
     background-color: #55101F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
-.ContenidoTexto {
+#CursoTexto{
+    justify-content: center;
+}
+.imagenes{
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.AvatarItem{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.AvatarItem img{
+    width: clamp(120px, 35vw, 300px);
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.AvatarItem h1{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ContenidoTexto {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     font-family: sans-serif;
     max-width: 600px;
     gap: 15px;
+}
+@media (max-width: 700px) {
+    .imagenes,
+    .DivContenido {
+        flex: 1 1 100%;
+    }
 }
 #TituloInicial {
     font-family: 'Lora', serif;
@@ -46,6 +89,7 @@
     background-color: #E0C69A;
     color: #4A0C1C;
     border: none;
+    margin-top: 20px;
     padding: 15px 20px;
     border-radius: 20px;
     font-family: sans-serif;
@@ -59,8 +103,8 @@
 /* AREAS CURSO           */
 /* ===================== */
 .AreasCurso {
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 95px;
     color: #4A0C1C;
 }
 #TituloAreas{

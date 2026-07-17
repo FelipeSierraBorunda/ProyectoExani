@@ -1,0 +1,119 @@
+.BloqueRegistro{
+    background-color: #55101F;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.AvatarRegistro{
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: white;
+    border: 2px solid #D8B37A;
+
+    left: 50%;
+    top: 9%;
+
+    transform: translate(-50%, -50%);
+}
+.AvatarRegistro img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.FormularioRegistro{
+    margin: 30px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding: 50px;
+    padding-top: 60px;
+   border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.FormularioRegistro h1 {
+    text-align: center;
+    color: #55101F;
+    line-height: 40px;
+    font-size: 30px;
+
+
+}
+.FormularioRegistro  h2{
+    color:#8A7B70;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+    margin-bottom:30px ;
+}
+.CampoRegistro{
+
+    width: 100%;
+    line-height: 25px;
+    padding: 5px;
+    align-self: self-start;
+
+}
+.CampoRegistro input,
+.CampoRegistro select{
+  border: 1.5px solid #E8D9BE;
+  border-radius: 10px ;
+  padding: 15px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 100%;
+  color: #8A7B70;
+  background-color: white;
+
+}
+.CampoRegistro label{
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+    margin-bottom: 5px;
+}
+.CampoRegistro input::placeholder{
+  color: #A89A8E;
+}
+.BotonRegistrar{
+    background-color: #55101F;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 25px ;
+    margin-top: 20px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+        cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.BotonRegistrar:hover{
+    background-color: #6E1729;
+}
+.BotonRegistrar:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.MensajeRegistro{
+    margin: 10px;
+    font-size: 15px;
+    color: #8A3040;
+}
+.LoginLink{
+    display: flex;
+    gap:5px
+}
+#Registrate{
+    color:#55101F;
+font-weight: bold;
+}

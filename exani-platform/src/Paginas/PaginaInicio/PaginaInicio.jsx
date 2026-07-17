@@ -1,4 +1,7 @@
 import './PaginaInicio.css'
+import avatarAndrea from "../../assets/AndreaPng.png"
+import avatarFelipe from "../../assets/FelipePng.png"
+
 
 function PaginaInicio() {
   return (
@@ -12,15 +15,26 @@ function PaginaInicio() {
 }
 function DescripcionCurso() {
     return (
+        
         <div className="DescripcionCurso">
-            <div className="DivContenido">
-                <div>
-                </div>
+            
+            <div className="DivContenido" id='CursoTexto'>
                 <div className="ContenidoTexto">
                     <h1 id="TituloInicial">Curso de preparación para el EXANI III</h1>
                     <p id="ParrafoDescripcion">Guías, módulos y simuladores diseñados por egresados que presentaron el examen y 
-                        obtuvieron los puntajes más altos.</p>
+                        obtuvieron los puntajes más altos. </p>
                     <button className="BotonInscribirse">Comenzar mi preparación</button>
+                </div>
+            </div>
+
+            <div className='imagenes'>
+                <div className="AvatarItem">
+                    <img src={avatarAndrea} alt="Avatar" />
+                    <h1>★ Andrea obtuvo 1215 pts</h1>
+                </div>
+                <div className="AvatarItem">
+                    <img src={avatarFelipe} alt="Avatar" />
+                    <h1>★ Felipe obtuvo 1210 pts</h1>
                 </div>
             </div>
         </div>

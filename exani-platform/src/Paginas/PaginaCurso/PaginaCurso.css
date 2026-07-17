@@ -1,0 +1,126 @@
+.ContenidoPagina{
+    width: fit-content;
+    margin: 0 auto;
+}
+.bannerPerfil{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding:30px;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+.ImagenPerfil{
+
+    border: 4px;
+    border-style:solid;
+    border-color: #D8B37A;
+    overflow: hidden;
+    border-radius: 50%;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+}
+.ImagenPerfil img { width:100%; height:100%; object-fit:cover }
+.informacionPerfil{
+    align-content: center;
+}
+.informacionPerfil h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #55101F;
+}
+.informacionPerfil h2{
+    font-weight:100;
+    font-size: 15px;
+    color: #A89A8E;
+}
+@media (max-width: 600px) {
+    .bannerPerfil{
+        justify-content: center;
+    }
+    .informacionPerfil{
+        text-align: center;
+    }
+}
+/* Bloque de cursos */
+
+.DivCursos{
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#TituloAreas{
+    width: auto;
+    align-self: flex-start;
+}
+.Modulos{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.Modulo{
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    max-width:300px;
+    border: none;
+    font: inherit;
+    line-height: 30px;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.LogoModulo{
+    background-color: #F3EBDD;
+    border-radius: 10px;
+    color:#6B1228;
+    font-size: 18px;
+    font-weight: bold;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Modulo h2{
+    color: #4A0C1C;
+    font-size: 18px;
+}
+.Modulo p{
+    color: #6E5F58;
+    font-size: 14px;
+}
+.ProgresoBorde{
+    background-color: #F3EBDD;
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.ProgesoInterno{
+    border-radius: inherit;
+    width: 50%;
+    height: 100%;
+    background-color: #55101F;
+    overflow: hidden;
+}
+.Progresorecorrido{
+    display: flex;
+    justify-content: space-between;
+}
+.Progresorecorrido p{
+      color: #6E5F58;
+    font-size: 13px;
+    font-weight: bold;
+}
