@@ -9,7 +9,7 @@ import LinkRegistro from './Paginas/PaginaRegistro/PaginaRegistro.jsx'
 import LinkReset from './Paginas/PaginaResetPassword/PaginaResetPassword.jsx'
 import LinkCuenta from './Paginas/PaginaCuenta/PaginaCuenta.jsx'
 import LinkCurso from './Paginas/PaginaCurso/PaginaCurso.jsx'
-
+import LinkEstudio from './Paginas/PaginaEstudio/PaginaEstudio.jsx'
 
 function App() {
 
@@ -26,6 +26,7 @@ function App() {
           <Route path="/reset-password" element={<LinkReset />} />
           <Route path="/PaginaCuenta" element={<LinkCuenta />} />
           <Route path="/PaginaCurso" element={<LinkCurso />} />
+          <Route path="/PaginaEstudio" element={<LinkEstudio />} />
         </Routes>
 
       </BrowserRouter>

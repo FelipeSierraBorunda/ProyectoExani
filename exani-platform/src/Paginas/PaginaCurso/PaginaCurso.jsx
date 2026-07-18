@@ -3,6 +3,7 @@ import { supabase } from "../../supabase.js"
 import useUsuario from "../../hooks/useUsuario"
 import avatarAndrea from "../../assets/Andrea.png"
 import "./PaginaCurso.css"
+import { useNavigate } from "react-router-dom"
 
 function PaginaCurso(){
     return(
@@ -40,8 +41,9 @@ function BannerPerfil(){
 }
 
 function Modulo1 (){
+    const navigate = useNavigate()
     return(
-        <button className="Modulo">
+        <button className="Modulo" onClick={() => navigate("/PaginaEstudio")}>
                 <div className="LogoModulo">M</div>
                     <h2>
                         Metodologia de la investigación

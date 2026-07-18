@@ -17,7 +17,8 @@ function BloqueLogin (){
     const [mostrarRecuperar,setMostrarRecuperar] = useState(false)
     const [cargando,setCargando] = useState(false)
 
-    async function manejadordelogin(){
+    async function manejadordelogin()
+    {
         setMensaje(" ... ")
         setMostrarRecuperar(false)
         setCargando(true)
@@ -32,6 +33,7 @@ function BloqueLogin (){
             setMostrarRecuperar(true)
         } else {
             setMensaje("Inicio de sesión exitoso")
+            
         }
     }
 
