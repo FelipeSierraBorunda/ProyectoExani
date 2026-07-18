@@ -2,11 +2,11 @@
 .General{
     margin: 0 auto;
     padding-top: 30px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: fit-content;
+    max-width: 100%;
 }
 
 /* ===== Barra lateral ===== */
@@ -93,12 +93,46 @@ font-weight: 700;
 .ModuloContenido{
     background-color: white;
     margin: 10px;
-    padding: 10px;
+    padding: 30px;
     border-radius: 20px;
+    max-width: 700px;
+}
+.ModuloContenido h2{
+     font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9A8468;
+  margin-bottom: 6px;
+}
+.ModuloContenido h1{
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2A2226;
+  margin: 0 0 24px;
 }
 
 
+.botonesModulos  {
+ width: 100%;
+display: flex;
+align-items: flex-start;
+
+  border: none;
+  cursor: pointer;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8A7B70;
+
+  margin-bottom: -1.5px;
+  border-bottom: 2.5px solid transparent;
+}
+
 .botonesModulos button {
+   
+    flex:1 ;
   background: none;
   border: none;
   cursor: pointer;
@@ -109,10 +143,88 @@ font-weight: 700;
   padding: 10px 16px;
   margin-bottom: -1.5px;
   border-bottom: 2.5px solid transparent;
+
 }
 
 .botonesModulos button.active {
   font-weight: 700;
   color: #6B1228;
   border-bottom: 2.5px solid #6B1228;
+}
+.ConceptoClaveDiv{
+    background: #FBF8F2;
+  border: 1px solid #EDE3D2;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 0 0 16px;
+}.ConceptoClaveDiv h1{
+    font-weight: 700;
+  color: #6B1228;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+.ConceptoClaveDiv p{
+      font-size: 15px;
+  line-height: 1.65;
+}
+.ModuloExplicacion{
+    margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3C332E;
+  font-family: 'Source Sans 3', sans-serif;
+    margin-top:20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+.preguntaEjemplo{
+background: #F3EBDD;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #4A0C1C;
+  margin-top: 30px;
+}
+.pasosEjemplo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.paso {
+  display: flex;
+  gap: 14px;
+}
+
+.pasoNumero {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #6B1228;
+  color: #F7F1E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pasoNumeroCheck {
+  background: #D4B483;
+  color: #4A0C1C;
+}
+
+.pasoTexto {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pasoTextoRespuesta {
+  font-weight: 600;
 }

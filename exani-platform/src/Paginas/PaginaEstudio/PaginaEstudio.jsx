@@ -45,7 +45,7 @@ function Modulo (){
             <h2>Modulo 1</h2>
             <h1>Tema 1: Metodo cientifico</h1>
             <div className="botonesModulos">
-               <button className={seccionActiva === "explicacion" ? "active" : ""}
+               <button className={seccionActiva === "explicacion" ? "active"  : ""}
                         onClick={() => setSeccionActiva("explicacion")}
                     >Explicacion</button>
                     <button
@@ -53,11 +53,63 @@ function Modulo (){
                         onClick={() => setSeccionActiva("ejemplo")}
                     >Ejemplo resuelto</button>
                     <button
-                        className={seccionActiva === "practica" ? "active" : ""}
+                        className={seccionActiva === "practica"  ? "active" : ""}
                         onClick={() => setSeccionActiva("practica")}
-                    >Práctica</button>
+                    >Práctica</button> 
+            </div>
+              {seccionActiva === "explicacion" && <ModuloExplicacion/>}
+                    {seccionActiva === "ejemplo" && <ModuloEjemplo/>}
+                    {seccionActiva === "practica" && <ModuloPractica/>}
+        </div>
+    )
+}
+function ModuloExplicacion(){
+    return(
+        <div className="ModuloExplicacion">
+            <p>El método científico es el procedimiento sistemático mediante el cual se genera conocimiento válido y verificable. En el EXANI se evalúa tu capacidad para identificar sus etapas en situaciones concretas.</p>
+            <div className="ConceptoClaveDiv">
+                <h1>Titulo</h1>
+                <p>Texto</p>
+            </div>
+            <p>Texto</p>
+        </div>
 
+    )
+}
+function ModuloEjemplo(){
+    return(
+        <div>
+            <div className="preguntaEjemplo">
+                <p>
+                   Texto
+                </p>
+            </div>
+
+            <div className="pasosEjemplo">
+                <div className="paso">
+                    <div className="pasoNumero">1</div>
+                    <div className="pasoTexto">
+                        texto
+                    </div>
+                </div>
+                <div className="paso">
+                    <div className="pasoNumero">2</div>
+                    <div className="pasoTexto">
+                        texto
+                    </div>
+                </div>
+                <div className="paso pasoRespuesta">
+                    <div className="pasoNumero pasoNumeroCheck">✓</div>
+                    <div className="pasoTexto pasoTextoRespuesta">
+                      texto
+                    </div>
+                </div>
             </div>
         </div>
+    )
+}
+function ModuloPractica(){
+    return(
+        <p>Hola</p>
     )
 }
