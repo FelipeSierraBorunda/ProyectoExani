@@ -1,22 +1,27 @@
 import { useNavigate } from "react-router-dom"
 import{useState} from "react"
 import "./PaginaEstudio.css"
+import "../PaginaSimulador/PaginaSimulador.jsx"
 import avatarAndrea from "../../assets/Andrea.png"
-function PaginaEstudio(){
+import avatarFelipe from "../../assets/FelipePng.png"
+import temas from "../../data/temas.json"
 
+function PaginaEstudio(){
+    const [temaActivoId, setTemaActivoId] = useState(0)
 
     return(
         <div className="General">
-            <BarraLateral/>
-            <Modulo/>
+            <BarraLateral temas={temas} temaActivoId={temaActivoId} setTemaActivoId={setTemaActivoId}/>
+            <Modulo tema={temas[temaActivoId]}/>
         </div>
     )
 }
 export default PaginaEstudio
-function BarraLateral (){
+function BarraLateral (props){
     
+    const { temas, temaActivoId, setTemaActivoId } = props
     const navigate = useNavigate()
-    const [seccionActiva, setSeccionActiva] = useState("1")
+    const [seccionActiva, setSeccionActiva] = useState("")
 
     return(
         <div className="BarraLateral">
@@ -24,10 +29,13 @@ function BarraLateral (){
             <h3>
                 Metodologia de la investigacion
             </h3>
-            <button className={`BotonTemas ${seccionActiva === "1" ? "active" : ""}`}
-                onClick={() => setSeccionActiva("1")} ><strong>1.</strong>  Tema 1</button>
-            <button className={`BotonTemas ${seccionActiva === "2" ? "active" : ""}`}
-                onClick={() => setSeccionActiva("2")}><strong>2.</strong>  Tema 1</button>
+            {temas.map((tema, iter) => 
+            (
+            <button key={iter} className={`BotonTemas ${temaActivoId === iter ? "active" : ""}`}
+                onClick={() => setTemaActivoId(iter)}>
+                <strong>{iter + 1}.</strong> {tema.tema}
+            </button>
+            ))}
 
             <div className="Tip">
                  <div className="ImagenPerfil1">
@@ -38,12 +46,13 @@ function BarraLateral (){
         </div>
     )
 }
-function Modulo (){
+function Modulo ({ tema }){
     const [seccionActiva, setSeccionActiva] = useState("explicacion")
+
     return(
         <div className="ModuloContenido">
             <h2>Modulo 1</h2>
-            <h1>Tema 1: Metodo cientifico</h1>
+            <h1>{tema.tema}</h1>
             <div className="botonesModulos">
                <button className={seccionActiva === "explicacion" ? "active"  : ""}
                         onClick={() => setSeccionActiva("explicacion")}
@@ -57,59 +66,62 @@ function Modulo (){
                         onClick={() => setSeccionActiva("practica")}
                     >Práctica</button> 
             </div>
-              {seccionActiva === "explicacion" && <ModuloExplicacion/>}
-                    {seccionActiva === "ejemplo" && <ModuloEjemplo/>}
-                    {seccionActiva === "practica" && <ModuloPractica/>}
+              {seccionActiva === "explicacion" && <ModuloExplicacion tema={tema}/>}
+                    {seccionActiva === "ejemplo" && <ModuloEjemplo tema={tema}/>}
+                    {seccionActiva === "practica" && <ModuloPractica tema={tema}/>}
         </div>
     )
 }
-function ModuloExplicacion(){
+function ModuloExplicacion({tema}){
     return(
         <div className="ModuloExplicacion">
-            <p>El método científico es el procedimiento sistemático mediante el cual se genera conocimiento válido y verificable. En el EXANI se evalúa tu capacidad para identificar sus etapas en situaciones concretas.</p>
+            <p>{tema.explicacion.definicion}</p>
             <div className="ConceptoClaveDiv">
-                <h1>Titulo</h1>
-                <p>Texto</p>
+                <h1>{tema.explicacion.conceptoClave.titulo}</h1>
+                <p>{tema.explicacion.conceptoClave.texto}</p>
             </div>
-            <p>Texto</p>
+            <p>{tema.explicacion.segundaDefinicion}</p>
         </div>
 
     )
 }
-function ModuloEjemplo(){
+function ModuloEjemplo({tema}){
     return(
         <div>
             <div className="preguntaEjemplo">
                 <p>
-                   Texto
+                   {tema.ejemploResuelto.pregunta}
                 </p>
             </div>
 
-            <div className="pasosEjemplo">
-                <div className="paso">
-                    <div className="pasoNumero">1</div>
-                    <div className="pasoTexto">
-                        texto
+           <div className="pasosEjemplo">
+                {tema.ejemploResuelto.pasos.map((paso, i) => (
+                    <div key={i} className={`paso ${paso.esRespuesta ? "pasoRespuesta" : ""}`}>
+                        <div className={`pasoNumero ${paso.esRespuesta ? "pasoNumeroCheck" : ""}`}>
+                            {paso.esRespuesta ? "✓" : paso.numero}
+                        </div>
+                        <div className={`pasoTexto ${paso.esRespuesta ? "pasoTextoRespuesta" : ""}`}>
+                            {paso.texto}
+                        </div>
                     </div>
-                </div>
-                <div className="paso">
-                    <div className="pasoNumero">2</div>
-                    <div className="pasoTexto">
-                        texto
-                    </div>
-                </div>
-                <div className="paso pasoRespuesta">
-                    <div className="pasoNumero pasoNumeroCheck">✓</div>
-                    <div className="pasoTexto pasoTextoRespuesta">
-                      texto
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     )
 }
-function ModuloPractica(){
+function ModuloPractica({tema}){
+        const navigate = useNavigate()
     return(
-        <p>Hola</p>
+        <div className="ModuloPratica">
+             <div className="ImagenPerfil2">
+                    <img src={avatarFelipe} alt="img" />
+                </div>
+                <h1>
+                    ¿Listo para practicar?
+                </h1>
+                <p>El simulador genera preguntas de este módulo con retroalimentación inmediata.</p>
+                 <button onClick={()=>navigate("/PaginaSimulador",{ state: { tema } }) }>Iniciar practica</button>
+        </div>
+
     )
 }

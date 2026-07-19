@@ -1,0 +1,92 @@
+[
+  {
+    "tema": "El método científico",
+    "explicacion": {
+      "definicion": "El método científico es el procedimiento sistemático mediante el cual se genera conocimiento válido y verificable. En el EXANI se evalúa tu capacidad para identificar sus etapas en situaciones concretas.",
+      "conceptoClave": {
+        "titulo": "Concepto clave",
+        "texto": "Toda investigación parte de una pregunta; la hipótesis es una respuesta tentativa que debe poder someterse a prueba."
+      },
+      "segundaDefinicion": "Las etapas clásicas son: observación, planteamiento del problema, formulación de hipótesis, experimentación y conclusiones. Los reactivos suelen presentarte un escenario y pedirte identificar en qué etapa se encuentra el investigador."
+    },
+    "ejemploResuelto": {
+      "pregunta": "Una investigadora registra durante tres meses la conducta de un grupo de estudiantes sin intervenir. ¿En qué etapa del método científico se encuentra?",
+      "pasos": [
+        { "numero": 1, "texto": "Identifica el verbo clave del escenario: \"registra sin intervenir\". No hay manipulación de variables ni prueba de hipótesis." },
+        { "numero": 2, "texto": "Compara con las etapas: la recolección sistemática de datos sin intervención corresponde a la observación." },
+        { "esRespuesta": true, "texto": "Respuesta: Observación. Es la etapa inicial de recolección de información directa." }
+      ]
+    },
+    "practica": [
+      {
+        "pregunta": "Un profesor manipula el método de enseñanza en un grupo y mide los resultados en un examen. ¿Qué etapa del método científico está aplicando?",
+        "respuestas": [
+          { "texto": "Observación", "correcta": false },
+          { "texto": "Experimentación", "correcta": true },
+          { "texto": "Planteamiento del problema", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál de las siguientes es una hipótesis correctamente formulada?",
+        "respuestas": [
+          { "texto": "¿Por qué algunos estudiantes reprueban?", "correcta": false },
+          { "texto": "A mayor número de horas de estudio, mejor calificación en el examen", "correcta": true },
+          { "texto": "Los estudiantes son importantes para la educación", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "Después de experimentar y analizar los datos, un investigador redacta los hallazgos. ¿En qué etapa se encuentra?",
+        "respuestas": [
+          { "texto": "Conclusiones", "correcta": true },
+          { "texto": "Observación", "correcta": false },
+          { "texto": "Formulación de hipótesis", "correcta": false }
+        ]
+      }
+    ]
+  },
+  {
+    "tema": "Enfoques cuantitativo y cualitativo",
+    "explicacion": {
+      "definicion": "Los enfoques de investigación determinan el tipo de datos y análisis. Distinguirlos es uno de los reactivos más frecuentes del área.",
+      "conceptoClave": {
+        "titulo": "Concepto clave",
+        "texto": "Cuantitativo mide y generaliza con números; cualitativo comprende significados y experiencias en profundidad."
+      },
+      "segundaDefinicion": "El enfoque cuantitativo usa instrumentos estandarizados, muestras grandes y estadística. El cualitativo usa entrevistas, observación participante y análisis de discurso. El enfoque mixto combina ambos."
+    },
+    "ejemploResuelto": {
+      "pregunta": "Un estudio aplica encuestas a 1,200 personas para medir la relación entre horas de estudio y puntaje obtenido. ¿Qué enfoque utiliza?",
+      "pasos": [
+        { "numero": 1, "texto": "Detecta las señales: encuesta estandarizada, muestra grande (1,200) y medición de relación entre variables." },
+        { "numero": 2, "texto": "Estas tres señales — instrumento estandarizado, muestra amplia, análisis de relación numérica — definen al enfoque cuantitativo." },
+        { "esRespuesta": true, "texto": "Respuesta: Enfoque cuantitativo." }
+      ]
+    },
+    "practica": [
+      {
+        "pregunta": "Un investigador entrevista a 8 migrantes para comprender sus experiencias de vida. ¿Qué enfoque utiliza?",
+        "respuestas": [
+          { "texto": "Cualitativo", "correcta": true },
+          { "texto": "Cuantitativo", "correcta": false },
+          { "texto": "Experimental", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál característica pertenece al enfoque cuantitativo?",
+        "respuestas": [
+          { "texto": "Análisis de discurso", "correcta": false },
+          { "texto": "Muestras grandes y estadística", "correcta": true },
+          { "texto": "Observación participante", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "Un estudio que combina encuestas numéricas y entrevistas a profundidad usa un enfoque:",
+        "respuestas": [
+          { "texto": "Mixto", "correcta": true },
+          { "texto": "Cuantitativo puro", "correcta": false },
+          { "texto": "Cualitativo puro", "correcta": false }
+        ]
+      }
+    ]
+  }
+]
