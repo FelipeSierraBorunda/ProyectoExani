@@ -1,0 +1,92 @@
+[
+  {
+    "tema": "Porcentajes",
+    "explicacion": {
+      "definicion": "El porcentaje expresa una cantidad como parte de 100. En el EXANI se evalúa tu capacidad para calcular porcentajes, aumentos y descuentos en situaciones cotidianas.",
+      "conceptoClave": {
+        "titulo": "Concepto clave",
+        "texto": "Para obtener el x% de una cantidad, multiplica la cantidad por x y divide entre 100 (o multiplica por su forma decimal)."
+      },
+      "segundaDefinicion": "Un aumento del x% se calcula multiplicando por (1 + x/100); un descuento del x%, por (1 − x/100). Los reactivos suelen presentar precios con rebajas, incrementos o proporciones que debes resolver en un solo paso."
+    },
+    "ejemploResuelto": {
+      "pregunta": "Un artículo cuesta $800 y tiene un descuento del 25%. ¿Cuál es su precio final?",
+      "pasos": [
+        { "numero": 1, "texto": "Identifica el tipo de operación: es un descuento, por lo que el precio final será menor que $800." },
+        { "numero": 2, "texto": "Calcula el precio final directamente: 800 × (1 − 0.25) = 800 × 0.75." },
+        { "esRespuesta": true, "texto": "Respuesta: $600. El artículo se paga al 75% de su valor original." }
+      ]
+    },
+    "practica": [
+      {
+        "pregunta": "¿Cuánto es el 15% de 240?",
+        "respuestas": [
+          { "texto": "36", "correcta": true },
+          { "texto": "24", "correcta": false },
+          { "texto": "40", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "Un salario de $10,000 aumenta 8%. ¿Cuál es el nuevo salario?",
+        "respuestas": [
+          { "texto": "$10,080", "correcta": false },
+          { "texto": "$10,800", "correcta": true },
+          { "texto": "$18,000", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "Si 45 es el 90% de una cantidad, ¿cuál es esa cantidad?",
+        "respuestas": [
+          { "texto": "50", "correcta": true },
+          { "texto": "40.5", "correcta": false },
+          { "texto": "55", "correcta": false }
+        ]
+      }
+    ]
+  },
+  {
+    "tema": "Ecuaciones de primer grado",
+    "explicacion": {
+      "definicion": "Una ecuación de primer grado es una igualdad con una incógnita elevada a la potencia 1. En el EXANI se evalúa que despejes la variable y encuentres su valor.",
+      "conceptoClave": {
+        "titulo": "Concepto clave",
+        "texto": "Lo que está sumando pasa restando, lo que multiplica pasa dividiendo (y viceversa). El objetivo es dejar la incógnita sola de un lado del signo igual."
+      },
+      "segundaDefinicion": "Se resuelven agrupando los términos con la incógnita de un lado y los números del otro, luego se despeja. Muchos reactivos plantean un problema en palabras que primero debes traducir a una ecuación."
+    },
+    "ejemploResuelto": {
+      "pregunta": "Resuelve para x: 3x + 5 = 20.",
+      "pasos": [
+        { "numero": 1, "texto": "Pasa el 5 al otro lado restando: 3x = 20 − 5, es decir, 3x = 15." },
+        { "numero": 2, "texto": "El 3 está multiplicando, así que pasa dividiendo: x = 15 ÷ 3." },
+        { "esRespuesta": true, "texto": "Respuesta: x = 5." }
+      ]
+    },
+    "practica": [
+      {
+        "pregunta": "Resuelve para x: 2x − 7 = 11.",
+        "respuestas": [
+          { "texto": "9", "correcta": true },
+          { "texto": "2", "correcta": false },
+          { "texto": "18", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "Resuelve para x: 5x = 3x + 12.",
+        "respuestas": [
+          { "texto": "6", "correcta": true },
+          { "texto": "3", "correcta": false },
+          { "texto": "12", "correcta": false }
+        ]
+      },
+      {
+        "pregunta": "El doble de un número más 4 es igual a 16. ¿Cuál es el número?",
+        "respuestas": [
+          { "texto": "6", "correcta": true },
+          { "texto": "8", "correcta": false },
+          { "texto": "10", "correcta": false }
+        ]
+      }
+    ]
+  }
+]

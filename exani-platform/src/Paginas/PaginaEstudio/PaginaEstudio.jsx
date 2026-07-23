@@ -1,14 +1,13 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate,useLocation} from "react-router-dom"
 import{useState} from "react"
 import "./PaginaEstudio.css"
-import "../PaginaSimulador/PaginaSimulador.jsx"
 import avatarAndrea from "../../assets/Andrea.png"
 import avatarFelipe from "../../assets/FelipePng.png"
-import temas from "../../data/temas.json"
 
 function PaginaEstudio(){
     const [temaActivoId, setTemaActivoId] = useState(0)
-
+    const {state} = useLocation()
+    const temas=state?.temas
     return(
         <div className="General">
             <BarraLateral temas={temas} temaActivoId={temaActivoId} setTemaActivoId={setTemaActivoId}/>
@@ -110,7 +109,7 @@ function ModuloEjemplo({tema}){
     )
 }
 function ModuloPractica({tema}){
-        const navigate = useNavigate()
+    const navigate = useNavigate()
     return(
         <div className="ModuloPratica">
              <div className="ImagenPerfil2">

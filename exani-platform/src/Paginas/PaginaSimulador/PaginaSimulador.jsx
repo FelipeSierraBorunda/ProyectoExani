@@ -1,5 +1,5 @@
 import { useNavigate, useLocation} from "react-router-dom"
-import "../PaginaEstudio/PaginaEstudio.jsx"
+import "./PaginaSimulador.css"
 
 
 function PaginaSimulador(){
@@ -8,7 +8,7 @@ function PaginaSimulador(){
     const tema=state?.tema
     return(
         <div>
-            <button onClick={()=>navigate("/PaginaEstudio") }>Regresar</button>
+            <button onClick={()=>navigate(-1) }>Regresar</button>
             <p>{tema?.tema}</p>
             <p>Hola</p>
             

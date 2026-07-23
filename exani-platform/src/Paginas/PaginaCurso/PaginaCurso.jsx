@@ -4,6 +4,8 @@ import useUsuario from "../../hooks/useUsuario"
 import avatarAndrea from "../../assets/Andrea.png"
 import "./PaginaCurso.css"
 import { useNavigate } from "react-router-dom"
+import temas from "../../data/temasMetologia.json"
+import temaMate from "../../data/temasMate.json"
 
 function PaginaCurso(){
     return(
@@ -31,8 +33,8 @@ function BannerPerfil(){
             <div className="DivCursos">
                 <h1 id="TituloAreas">Tus áreas</h1>
                 <div className="Modulos">
-                   <Modulo1/>
                     <Modulo1/>
+                    <Modulo2/>
                     <Modulo1/>
                 </div>
             </div>
@@ -43,10 +45,30 @@ function BannerPerfil(){
 function Modulo1 (){
     const navigate = useNavigate()
     return(
-        <button className="Modulo" onClick={() => navigate("/PaginaEstudio")}>
+        <button className="Modulo" onClick={() => navigate("/PaginaEstudio",{ state: { temas } })}>
                 <div className="LogoModulo">M</div>
                     <h2>
                         Metodologia de la investigación
+                    </h2>
+                    <p>6 modulos </p>
+                    <div className="Progresorecorrido">
+                        <p>Progreso</p>
+                        <p>50%</p>
+                    </div>
+                    <div className="ProgresoBorde">
+                        <div className="ProgesoInterno">
+                    </div>
+                </div>
+        </button>
+    )
+}
+function Modulo2 (){
+    const navigate = useNavigate()
+    return(
+        <button className="Modulo" onClick={() => navigate("/PaginaEstudio",{ state: { temas:temaMate } })}>
+                <div className="LogoModulo">M</div>
+                    <h2>
+                        Pensamiento matematico 
                     </h2>
                     <p>6 modulos </p>
                     <div className="Progresorecorrido">
