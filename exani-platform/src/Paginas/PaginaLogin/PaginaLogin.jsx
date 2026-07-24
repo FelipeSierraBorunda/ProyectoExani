@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link,useNavigate } from "react-router-dom"
 import { supabase } from "../../supabase.js"
 import "./PaginaLogin.css"
 import avatarAndrea from "../../assets/Andrea.png"
@@ -16,6 +16,7 @@ function BloqueLogin (){
     const [mensaje,setMensaje] = useState(``)
     const [mostrarRecuperar,setMostrarRecuperar] = useState(false)
     const [cargando,setCargando] = useState(false)
+    const navigate = useNavigate()
 
     async function manejadordelogin()
     {
@@ -33,7 +34,10 @@ function BloqueLogin (){
             setMostrarRecuperar(true)
         } else {
             setMensaje("Inicio de sesión exitoso")
-            
+            setTimeout(() =>
+                {
+                 navigate("/PaginaCurso")
+                }, 1000) // 2000ms = 2 segundos
         }
     }
 
