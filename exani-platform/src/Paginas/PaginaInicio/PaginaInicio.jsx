@@ -76,27 +76,27 @@ function PlanesPago() {
                 </div>
                 <div className="ContenedorPlanes">
                     <div className="Planes" id="Plan1">
-                        <h4 id='tituloPlan1'>GUÍA COMPLETA</h4>
+                        <h4 id='tituloPlan1'>BANCO DE PREGUNTAS</h4>
                         <div id="ContenedorPrecio">
                             <h2> $ 100</h2>
                             <h3 id='moneda1'>MXN </h3>
                         </div>
                         <ul>
-                            <li> Las 3 areas completas por modulos</li>
-                            <li>Ejemplos resueltos paso a paso</li>
-                            <li>Simuladores de examen</li>
+                            <li> 60 preguntas por cada área</li>
+                            <li> Preguntas iguales que las del simulador </li>
+                            <li> Total de 3 bancs de preguntas</li>
                         </ul>
                         <button>Seleccionar Plan</button>
                     </div>
                     <div className="Planes" id="Plan2">
-                        <h4 id='tituloPlan2'>GUÍA COMPLETA + ASESORÍA </h4>
+                        <h4 id='tituloPlan2'>GUÍA COMPLETA + BANCO DE PREGUNTAS </h4>
                          <div id="ContenedorPrecio">
                             <h2 id='precio2'> $ 200 </h2>
                             <h3 id='moneda2'>MXN </h3>
                         </div>
                         <ul>
-                            <li>La guia completa</li>
-                            <li>1 asesoria personalizada</li>
+                            <li>Las 3 areas completas por modulos</li>
+                            <li>ejemplos resueltos paso a paso</li>
                             <li>Simuladores de examen</li>
                         </ul>
                         <button>Seleccionar Plan</button>
